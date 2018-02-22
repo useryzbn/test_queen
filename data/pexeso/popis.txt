@@ -1,3 +1,6 @@
 Datove subory:
   - pexeso
   
+
+Slovicka a modelove vety
+
