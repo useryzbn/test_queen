@@ -1,0 +1,385 @@
+
+               QQQQQ     UU   UU   EEEEEEE   EEEEEEE   NN    NN 
+              QQ   QQ    UU   UU   EE        EE        NNN   NN 
+              QQ   QQ    UU   UU   EEEEE     EEEEE     NN NN NN 
+              QQ   QQ    UU   UU   EE        EE        NN   NNN 
+               QQQQQQQ    UUUUU    EEEEEEE   EEEEEEE   NN    NN 
+
+
+      Verzia 5.1
+      Program na vyucbu cudzieho jazyka
+
+                                                          Copyright (c) 1996
+                                                         All rights reserved
+
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+      Queen     - efektivny univerzalny vyucbovy program cudzich jazykov pre
+                  vsetky vekove  kategorie a rozne stupne  pokrocilosti. Na-
+                  rocnost vyucby zalezi len a len od uzivatela programu.
+
+                  Jednoduchy program za jednoduchu cenu (0,-Sk s DPH).
+
+      **********************************************************************
+      Autor programu :
+            V dnesnej dobe niet u nas vacsej vymozenosti ako ovladanie aspon
+      jedneho  svetoveho jazyka. Dokonca  ani skvele  ovladanie PC sa tomuto
+      aspektu nevyrovna. Ti, ktori  disponuju touto vymozenostou, maju dvere
+      do  sveta dokoran  otvorene, avsak stale je  medzi nami mnozstvo tych,
+      ktori cudzi jazyk neovladaju. Snazia sa ho naucit, zdokonalit sa v nom
+      a presadit. Pri tomto procese im vydatne moze pomoct vypoctova techni-
+      ka.
+            Existuje mnozstvo  vyucbovych  programov ( nemyslim na programy,
+      ako je napr. LangMaster, ktorych cena je niekolko tisicok a navyse vy-
+      zaduju  silny hardware a v mnohych pripadoch aj CD ROM mechaniku - te-
+      da, dalsie financie ). Mam na mysli programy, ktore su pristupne siro-
+      kej pocitacovej verejnosti, pretoze su financne a vykonnostne nenaroc-
+      ne. Tento program je tak nenarocny, ze pobezi snad aj na Zetor-e.
+            Alfou a omegou  ovladania cudzieho jazyka je bohata slovna zaso-
+      ba. A samozrejme kazdy program by mal poskytovat funkciu skusania slo-
+      vicok alebo modelovych viet.
+            Zial,  dosial som sa nestretol s programom, ktory  by ma v plnej
+      miere  uspokojil. V jednom  programe sa  neda zrusit zvuk, v druhom sa
+      zahadne miesaju  slovicka. V dalsom neprijemne blika kurzor na mieste,
+      kde by  nemal, alebo  program striktne  vyzaduje napisanie slovicka, i
+      ked viem, ze "chlapec" sa  po anglicky pise "boy". Iny program zaporne
+      vyhodnoti moju odpoved len preto, lebo ma vo svojich datach ine slovo,
+      aj ked  vyznamovo rovnake. Dalsi  program  produkuje  tzv.hudbu cez PC
+      speaker, ktora sa v ziadnom pripade neda pocuvat. Alebo program pracu-
+      je s datami vo formate, ktory nedovoluje v dalsej faze modifikovat da-
+      ta inym univerzalnym programom.
+
+            Program Queen neeviduje ani percentualnu uspesnost ani nevyzadu-
+      je presne pisanie slovneho vyrazu. Neobsahuje ziadnu hudbu alebo neja-
+      ke uzasne graficke  prostredie. Je to  jednoduchy program, pracujuci v
+      nam vsetkym  dobre znamom  nortonovskom  prostredi. Myslim si, ze aj v
+      dnesnom svete  Windows, moze byt takyto program v textovom mode celkom
+      prijatelny a prijemny. Dolezite je, aby  svojou  funkcnostou vyslovene
+      pomahal.
+
+                     V jednoduchosti je sila a krasa.
+
+      **********************************************************************
+
+            Queen  poskytuje  sluzby  na baze  skusania  slovicok,  slovnych
+      spojeni a modelovych viet. Funguje v podstate ako Viewer.
+
+      Program je spustitelny v operacnom systeme MS DOS 3.x a vyssie.
+
+          Uzivatel pracuje v jednoduchom a prijemnom prostredi,  zahrnujucom
+      3 aktivne oblasti.
+
+         1.  Informacna oblast
+               - plna  cesta nacitaneho  datoveho suboru .dbf, znak zvukovej
+                 signalizacie "Z",  znak blokovania vyslovnosti "Vn",  nazov
+                 programu,  znak skrateneho rezimu, ciselna hodnota  filtra,
+                 ciselna  hodnota  obtiaznosti, indikacia  zmazaneho zaznamu
+                 "Zmaz",  cislo  aktivneho  zaznamu, celkovy  pocet zaznamov
+                 (slovnych vyrazov) pri danom filtri, opakovanie podavania.
+         2.  Oblast ponuky ovladania ( tzv. lokalne MENU )
+               - tato oblast ponuka  uzivatelovi sposob  ovladania  programu
+                 z daneho aktivneho rezimu pomocou  funkcnych klaves <F1> az
+                 <F10>.
+         3.  Pracovna oblast
+               - v tejto oblasti su zobrazene (aktivne) jednotlive pracovne
+                 rezimy programu.
+
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            Program pracuje s  datovymi  subormi formatu DBF, ktore mozu byt
+      vytvorene v databazovych programoch dBase, FoxPro, Clipper, atd. Dato-
+      ve subory su v troch vyhotoveniach.
+            Prvy datovy subor obsahuje slovne vyrazy, v druhom sa nachadzaju
+      modelove vety. Treti subor  obsahuje pomenovanie jednotlivych filtrov.
+      S programom  Queen je dodavany datovy  subor `ds_zacia.dbf` - anglicke
+      slovicka a `fs_zacia.dbf` - pomenovane filtre.
+            Je na uzivatelovi, ako si pomenuje vlastne datove subory /max. 6
+      znakov/ a akymi slovnymi vyrazmi alebo  vetami si ich naplni. Dolezite
+      je vsak dodrzat strukturu jednotlivych datovych suborov, ktora je uve-
+      dena nizsie.
+            Tento program je, co sa tyka cudzej reci, univerzalny. To zname-
+      na, ze je mozne naplnit datove subory slovickami akejkolvek cudzej re-
+      ci.  Uzivatel  si  moze  vytvorit  anglicko-francuzsky  slovnik, alebo
+      spanielsko-taliansky. Vsetko zalezi len na nom.
+
+      Struktura datoveho suboru - `slovne vyrazy` :
+
+                      Meno           Typ       Dlzka     Desatiny
+      _____________________________________________________________
+           1.       DOMACI            C         35          0
+           2.       CUDZI             C         35          0
+           3.       VYSLOVNOST        C         35          0
+           4.       POZNAMKA          C         20          0
+           5.       TYP               N          2          0
+           6.       OBTIAZNOST        N          1          0
+           7.       BLOK              L          1          0
+           8.       OPRAVA            L          1          0
+
+      Struktura datoveho suboru - `modelove vety` :
+
+                      Meno           Typ       Dlzka     Desatiny
+      _____________________________________________________________
+           1.       DOMACI_1          C         40          0
+           2.       DOMACI_2          C         40          0
+           3.       DOMACI_3          C         40          0
+           4.       CUDZI_1           C         40          0
+           5.       CUDZI_2           C         40          0
+           6.       CUDZI_3           C         40          0
+           7.       POZNAMKA          C         20          0
+           8.       TYP               N          2          0
+           9.       OBTIAZNOST        N          1          0
+          10.       BLOK              L          1          0
+          11.       OPRAVA            L          1          0
+
+      Struktura datoveho suboru - `pomenovane filtre` :
+
+                      Meno           Typ       Dlzka     Desatiny
+      _____________________________________________________________
+           1.       TYP               N          2          0
+           2.       NAZOV             C         13          0
+
+
+      TYP        - hodnota = 1 az 60
+                 - definovanie typu daneho vyrazu (kapitola)
+                 - (typy  jednotlivych  vyrazov su zohladnene v pomenovanych
+                    filtroch)
+
+      OBTIAZNOST - hodnota = 1, 2 alebo 3
+                 - definovanie obtiaznosti slovnych (vetnych) vyrazov
+                 - 1 - lahky vyraz
+                   2 - stredne tazky vyraz
+                   3 - tazky vyraz
+
+      BLOK       - hodnota = T alebo F
+                 - blokovanie vyrazu pre dalsie podavanie
+                 - (manualne blokovanie  vyrazov, ktore su uz dobre zname, a
+                    ktore sa uz nebudu ponukat v rezime skusania)
+
+      OPRAVA     - hodnota = T alebo F
+                 - oznacenie vyrazu, ktory je  potrebne v zdrojovom  datovom
+                   subore opravit
+                 - (nasledne je potrebne pouzit editor DBF suborov)
+
+      Nazov  datoveho  suboru  zdrojovych dat sa zacina znakmi `ds_` [slovne
+      vyrazy]  alebo `dv_` [modelove vety]  a  nazvom  konkretneho  datoveho
+      suboru /max. 5 znakov/.
+
+      Nazov  datoveho  suboru  pomenovanych  filtrov sa  zacina znakmi `fs_`
+      alebo `fv_` a nazvom konkretneho datoveho suboru /max. 5 znakov/.
+
+      Program Queen dokaze  nacitat datovy subor o velkosti max.10000 zazna-
+      mov, tj. max.10000 slovnych vyrazov.
+
+
+      Ovladanie programu Queen:
+
+      F1     - informacie o datovom subore
+             - pomocky pri ovladani programu
+             - informacie o programe
+      F2     - spustenie skusania
+      F3     - prepinac zvukovej signalizacie
+      F4     - indikacia blokovaneho zaznamu ( slovicka )
+               / Takto oznaceny slovny vyraz bude pre dalsie pouzitie bloko-
+                 vany, tzn. program ho uz nevyberie z ponuky datoveho suboru.
+                 Pouziva sa pri lahkych  slovickach, ktore uzivatel uz dobre
+                 pozna a nepotrebuje ich pri dalsom testovani.
+                 Tato indikacia trva az po  zrusenie  blokovej znacky priamo
+                 v datovom subore - v logickej polozke BLOK. /
+      F5     - blokovanie vyslovnosti
+               / Vyslovnost  sa nezobrazuje. Mozne  nastavit  len  v  subore
+                 `slovne vyrazy` /
+      F6     - filter vyberu slovnych vyrazov
+               / Tato indikacia je  evidovana v datovom  subore v numerickej
+                 polozke TYP.
+                 Uzivatel moze  v datovom  subore  zadefinovat az 60 roznych
+                 podskupin
+                 napr.  1 - podstatne mena
+                        2 - pridavne mena
+                       ...
+                        5 - slovesa
+                       ...
+                       12 - nepravidelne slovesa
+                       ...
+                       27 - sport
+                       ...
+                 To znamena, ze  uzivatel sa moze  preskusat napr. len z ne-
+                 pravidelnych slovies. Vsetko zalezi len od uzivatela.
+                 Po stlaceni klavesy F6 a  zadani  hodnoty 0 - filter je od-
+                 blokovany - test vyberie kazde slovicko. /
+      F7     - v standardnom rezime - RezimS - skrateny rezim ( bez zobra-
+               zenia vysledku, napr. su ponukane len domace vyrazy )
+               / Mozne nastavit len mimo globalneho podavania /
+      F8     - indikacia opravovaneho zaznamu ( slovicka )
+               / Takto oznaceny  slovny  vyraz  bude  pripraveny pre samotnu
+                 opravu.
+                 Indikacia je evidovana v logickej polozke OPRAVA ( True ) a
+                 trva az po prepisani tejto polozky na ( False - f ).
+                 Program  Queen  neumoznuje  priame  modifikovanie  datovych
+                 suborov. Toto je mozne previest uz vyssie uvedenymi progra-
+                 mami alebo  programom  DB_Edit, ktory je taktiez k dispozi-
+                 cii sirokej verejnosti - vid. nizsie. /
+      F9     - zastavenie automatickeho podavania zaznamov / prepinac /
+      F10    - ukoncenie programu
+
+      ESC    - ukoncenie automatickeho podavania zaznamov
+      SPACE (medzernik)
+             - rovnaka funkcia ako pri F9
+      TAB  alebo  SIPKA VPRAVO
+             - manualny posun dalsieho objektu (slovny vyraz  alebo modelova
+               veta)
+      SIPKA VLAVO
+             - funcia UNDO - skok na predosly objekt (slovny vyraz alebo mo-
+               delova veta)
+      SIPKA VPRAVO
+             - skok na dalsi objekt (slovny vyraz alebo modelova veta)
+      SIPKA DOLE
+             - rovnaka funkcia ako pri F9
+      BACKSPACE
+             - dany objekt sa v skusani zopakuje
+
+      POZNAMKA : Pri editovani datoveho suboru je mozne pouzit akykolvek da-
+                 bazovy program, podporujuci datovy format DBF. Takisto je
+                 mozne pouzit databazovy editor DB_Edit.
+
+      s      - nastavenie sposobu podavania zaznamov:
+               - manualne podavanie klavesou ENTER alebo SIPKA VPRAVO
+               - automaticke podavanie
+                                      slovne vyrazy     modelove vety
+                 _____________________________________________________
+                 rychlost - 5             1.5 s           3 s
+                 rychlost - 4             3.6 s           6 s
+                 rychlost - 3             5.4 s           9 s
+                 rychlost - 2             7.2 s          12 s
+                 rychlost - 1             9   s          15 sekund
+
+                 rychlost - 3                                      /default/
+
+                                        klavesova skratka
+                 _____________________________________________________
+                 rychlost - 5                   5
+                 rychlost - 4                   4
+                 rychlost - 3                   3
+                 rychlost - 2                   2
+                 rychlost - 1                   1
+                 manualne                       0  alebo  m
+
+      r      - zobrazenie odpocitavania - pri automatickom podavani
+      b      - zobrazenie obtiaznosti
+
+      p      - druh podavania:
+               - globalne ( zobrazene vsetky informacie naraz )    /default/
+               - domaci vyraz
+               - cudzi vyraz
+               - vyslovnost
+                   (pokial nie je nastavene blokovanie vyslovnosti - F5)
+               - nahodile 1 ( domaci vyraz alebo cudzi - nahodny vyber poci-
+                 taca )
+               - nahodile 2 ( domaci vyraz, cudzi alebo vyslovnost )
+                   (pokial nie je nastavene blokovanie vyslovnosti - F5)
+
+                                        klavesova skratka
+                 _____________________________________________________
+                 globalne                       g
+                 domaci vyraz                   d
+                 cudzi vyraz                    c
+
+      o      - opakovanie slovneho vyrazu:
+               - len raz ( kazde slovicko sa v teste objavi len raz )
+                                                                   /default/
+               - viackrat ( kazde slovicko sa v teste objavi max.3 krat )
+
+      n      - naslednost poradia jednotlivych slovnych vyrazov:
+               - v poradi ( slovicka  sa v  teste  objavuju v poradi, v akom
+                 su evidovane v datovom subore
+               - nahodila ( nahodny vyber pocitaca )               /default/
+
+      k      - nastavenie kodovej stranky pre foneticku transkripciu:
+               - LATIN 2                                           /default/
+               - bratov KAMENICKYCH
+
+      Poznamka : default - hodnoty, ktore su nastavene  pri starte programu.
+
+      **********************************************************************
+
+      Program sa aktivuje s parametrom:
+
+      *.dbf
+      pr.
+        queen.exe ds_zacia.dbf         ( nacitanie datoveho
+                                           suboru ds_zacia.dbf )
+
+      Dalsie zakladne parametre:
+
+      /nas
+      pr.
+        queen.exe ds_zacia.dbf /nas=1.5  ( nastavenie nasobica spomalenia
+                                           automatickeho podavania
+                                           - min. 1.1 .. max. 5.0'
+                                           - napr. 1.5-nasobne spomalenie )
+
+      /log
+      pr.
+        queen.exe ds_zacia.dbf /log=1  ( ukladanie do logovacieho suboru
+                                           - zaznamenavanie aktivity
+                                             pouzivatela
+                                           - 1 .. s kontrolnymi bodmi
+                                           - 2 .. bez kontrolnych bodov
+                                           - mozne pouzit ako rodicovsku
+                                             kontrolu
+                                           - logovaci subor je ulozeny
+                                             v adresari LOG
+                                             - napr. ds_zacia.001 )
+
+        Dalsie parametre nastavenia programu ... param.txt
+      pr.
+      queen.exe ds_zacia.dbf /a=5 /s=4 /p=4 /o=2 /n=1 /k=1 /v /m /z=5 /b=12
+       /f=1,3-5,24
+
+           Datovy  subor  `ds_zacia.dbf`  je zadany  ako  anglicko-slovensky
+      slovnik, pricom  slovenske slovne vyrazy su napisane v kodovej stranke
+      852 LATIN 2.
+           Datovy subor musi zacinat uvodnym prefixom "ds_" a nazov datoveho
+      suboru nesmie presahovat 8 znakov (mimo pripony .dbf).
+
+           Ak  sa v  adresari  nachadza  subor s  prefixom "fs_" alebo "fv_"
+      (+ rovnaky  doplnkovy  nazov, ako ma  datovy subor), v  programe  budu
+      k dispizicii aj pomenovane filtre (kapitoly) daneho datoveho suboru.
+
+      napr.   datovy subor         ds_zacia.dbf
+              subor s filtrami     fs_zacia.dbf
+
+      **********************************************************************
+           Na modifikovanie datovych suborov ( *.dbf ) je mozne pouzit skve-
+      ly Norton dBase Editor-DB_Edit 7.6 (databazovy editor - www.rmsoft.sk)
+      **********************************************************************
+
+                     MEDZINARODNA FONETICKA TRANSKRIPCIA
+      Vyslovnost napriklad anglickych slovnych vyrazov by mala byt zadefino-
+      vana vo forme  medzinarodnej fonetickej  transkripcie obsahujucej spe-
+      cialne znaky :
+                <Alt+A> - otvorene e
+                <Alt+E> - temna neurcita samohlaska
+                <Alt+N> - nosova spoluhlaska
+                <Alt+S> - neznela medzizubna spoluhlaska
+                <Alt+Z> - znela medzizubna spoluhlaska
+                <Alt+9> - vedlajsi prizvuk slova
+                <Alt+0> - hlavny prizvuk slova
+      Tieto znaky su  zahrnute v programe  DB_Edit 7.6 vo fonte  pod kodovou
+      strankou LATIN 2 alebo bratov KAMENICKYCH.
+
+            Autor dakuje za kazdu vecnu pripomienku k tomuto programu, ktoru
+      mozete zaslat na hore uvedenu adresu.
+
+
+      UPOZORNENIE :
+      Tato aplikacia je 16-bitova a je primarne urcena pre starsi OS DOS.
+
+
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+      Rychle, prijemne a hlavne efektivne ucenie s tymto programom
+
+                                           Vam zela
+
+
+                                                                autor.
