@@ -1,0 +1,117 @@
+                               Quick Reference
+                               ===============
+
+      Queen
+      -------
+      Verzia 5.1
+      Program na vyucbu cudzieho jazyka
+                                                          Copyright (c) 1996
+                                                         All rights reserved
+
+
+      **********************************************************************
+
+                       Cinnost                                        Klaves
+      ----------------------------------------------------------------------
+      Informacie                                                          F1
+      Start - spustenie skusania                                          F2
+      Zvukova signalizacia / prepinac /                                   F3
+          ( bez signalu, z1 az z5 )
+      Indikacia blokovaneho zaznamu ( slovicka alebo vety )               F4
+      Blokovanie vyslovnosti                                              F5
+          ( vyslovnost sa nezobrazuje, len pri slovickach )
+      Filter vyberu slovnych vyrazov                                      F6
+      Skrateny rezim - v standardnom rezime                               F7
+          ( vysledok sa nezobrazuje )
+      Indikacia opravovaneho zaznamu ( slovicka alebo vety )              F8
+      Zastavenie automatickeho podavania zaznamov / prepinac /            F9
+        alebo                                                  - medzernik -
+        alebo                                                 - sipka dole -
+      Ukoncenie programu                                                 F10
+
+      ----------------------------------------------------------------------
+      Ukoncenie automatickeho podavania objektov                         ESC
+      Manualny posun dalsieho objektu ( slovicka alebo vety )            TAB
+        alebo                                               - sipka vpravo -
+      Funcia UNDO - skok na predosly objekt                  - sipka vlavo -
+
+      ----------------------------------------------------------------------
+      Nastavenie sposobu podavania objektov                                s
+        Sposob podavania:  manualne                  0  alebo m
+                           rychlost - 1              1
+                           rychlost - 2              2
+                           rychlost - 3              3
+                           rychlost - 4              4
+                           rychlost - 5              5
+
+      Druh podavania                                                       p
+             podavanie:    globalne                  g
+                           domaci vyraz              d
+                           cudzi vyraz               c
+
+      Opakovanie objektu                                                   o
+
+      Naslednost poradia jednotlivych objektov                             n
+
+      Nastavenie kodovej stranky                                           k
+
+            .. zobrazenie odpocitavania                 r
+            .. zobrazenie obtiaznosti                   b
+
+      **********************************************************************
+
+      Program sa aktivuje s parametrom:
+
+      *.dbf
+      pr.
+        queen.exe ds_zacia.dbf         ( nacitanie datoveho
+                                           suboru ds_zacia.dbf )
+
+      Dalsie zakladne parametre:
+
+      /nas
+      pr.
+        queen.exe ds_zacia.dbf /nas=1.5  ( nastavenie nasobica spomalenia
+                                           automatickeho podavania
+                                           - min. 1.1 .. max. 5.0'
+                                           - napr. 1.5-nasobne spomalenie )
+
+      /log
+      pr.
+        queen.exe ds_zacia.dbf /log=1  ( ukladanie do logovacieho suboru
+                                           - zaznamenavanie aktivity
+                                             pouzivatela
+                                           - 1 .. s kontrolnymi bodmi
+                                           - 2 .. bez kontrolnych bodov
+                                           - mozne pouzit ako rodicovsku
+                                             kontrolu
+                                           - logovaci subor je ulozeny
+                                             v adresari LOG
+                                             - napr. ds_zacia.001 )
+
+        Dalsie parametre nastavenia programu ... param.txt
+      pr.
+      queen.exe ds_zacia.dbf /a=5 /s=4 /p=4 /o=2 /n=1 /k=1 /v /m /z=5 /b=12
+       /f=1,3-5,24
+
+           Datovy  subor  `ds_zacia.dbf`  je zadany  ako  anglicko-slovensky
+      slovnik, pricom  slovenske slovne vyrazy su napisane v kodovej stranke
+      852 LATIN 2.
+           Datovy  subor  musi  zacinat  uvodnym  prefixom "ds_" alebo "dv_"
+      a nazov datoveho suboru nesmie presahovat 8 znakov (mimo pripony .dbf).
+
+           Ak  sa v  adresari  nachadza  subor  s prefixom "fs_" alebo "fv_"
+      (+ rovnaky  doplnkovy  nazov, ako ma  datovy subor),  v programe  budu
+      k dispizicii aj pomenovane filtre (kapitoly) daneho datoveho suboru.
+
+      napr.   datovy subor         ds_zacia.dbf
+              subor s filtrami     fs_zacia.dbf
+
+      **********************************************************************
+
+      ----------------------------------------------------------------------
+      ****    Blizsie informacie najdete v subore: queen.txt
+      ----------------------------------------------------------------------
+
+      UPOZORNENIE :
+      Tato aplikacia je 16-bitova a je primarne urcena pre starsi OS DOS.

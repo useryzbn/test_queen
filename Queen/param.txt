@@ -1,0 +1,136 @@
+                                  Parametre
+                                  =========
+
+      Queen
+      -------
+      Verzia 5.1
+      Program na vyucbu cudzieho jazyka
+                                                          Copyright (c) 1996
+                                                         All rights reserved
+
+
+      **********************************************************************
+
+      Program Queen je mozne spustat s roznymi parametrami...
+
+      Datovy subor - povinny parameter
+      ------------
+      *.dbf   nazov datoveho suboru formatu DBF
+              napr.
+                ds_zacia.dbf
+
+
+      Nasobic spomalenia podavania
+      ----------------------------
+      /nas=1.1 az 5.0   (pre rychle procesory)
+
+
+      Ukladanie do logovacieho suboru - rodicovska kontrola
+      -----------------------------------------------------
+      /log=1    s kontrolnymi bodmi
+           2    bez kontrolnych bodov
+
+
+      Automaticky start skusania
+      --------------------------
+      /a
+      /a=0 az 10  (priblizne v sekundach, v zavislosti na nastaveni
+                     nasobica spomalenia)
+
+
+      Sposob podavania
+      ----------------
+      /s=0      rychlost - 0 (manualne)
+         1      rychlost - 1
+         2      rychlost - 2
+         3      rychlost - 3 /default/
+         4      rychlost - 4
+         5      rychlost - 5
+
+
+      Druh podavania
+      --------------
+      /p=0      globalne /default/
+         1      domaci vyraz
+         2      cudzi vyraz
+         3      vyslovnost
+         4      nahodile 1 (domaci vyraz alebo cudzi)
+         5      nahodile 2 (domaci vyraz, cudzi alebo vyslovnost)
+
+
+      Opakovanie objektu
+      ------------------
+      /o=1      len raz /default/
+         2      viackrat
+
+
+      Naslednost
+      ----------
+      /n=1      v poradi
+         2      nahodila /default/
+
+
+      Kodova stranka
+      --------------
+      /k=1      LATIN 2 /default/
+         2      bratov KAMENICKYCH
+
+
+      Zvuk
+      ----
+      /z=0      bez zvuku /default/
+         1      zvuk 1
+         2      zvuk 2
+         3      zvuk 3
+         4      zvuk 4
+         5      zvuk 5
+
+
+      Obtiaznost
+      ----------
+      /t=123    vsetky obtiaznosti /default/
+         1      obtiaznost 1
+         2      obtiaznost 2
+         3      obtiaznost 3
+         23     obtiaznost 2 a 3
+
+
+      Filter
+      ------
+      /f=...    moznost pouzitia textoveho retazca
+                napr.
+                  1,7,53
+                  2-5,19,24-35,17,60
+
+
+      Blokovanie vyslovnosti
+      ----------------------
+      /v        len slovne vyrazy (bez zobrazovania vyslovnosti)
+
+
+      Definovanie skrateneho rezimu - RezimS
+      --------------------------------------
+      /m        skrateny rezim (bez zobrazovania vysledku)
+
+
+      Zobrazenie rychlosti
+      --------------------
+      /r        zobrazenie rychlosti
+
+
+      Zobrazenie obtiaznosti
+      ----------------------
+      /b        zobrazenie obtiaznosti
+
+
+      **********************************************************************
+      PRIKLADY
+      ========
+
+      queen.exe ds_zacia.dbf /nas=1.5 /log=1
+
+      queen.exe ds_zacia.dbf /log=2 /a /s=2 /p=1 /z=2 /o=1 /f=2,23,4-8
+
+      queen.exe ds_zacia.dbf /nas=3.4 /log=1 /a=5 /s=2 /p=1 /o=1 /n=1 /k=2
+       /v /m /r /b /z=2 /t=3 /f=12,32,7-9,54
+
