@@ -1,2 +1,2 @@
-# test_queen
-Test Queen
+# Test Queen
+This is a test of application Queen.
