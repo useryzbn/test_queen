@@ -1,0 +1,5 @@
+Datove subory:
+  - pexeso
+  
+
+Slovicka a modelove vety pre aplikaciu Queen.
